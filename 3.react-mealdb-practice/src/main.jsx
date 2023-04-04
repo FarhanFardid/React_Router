@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Components/Root/Root'
 import Foods from './Components/Foods/Foods'
 import Order from './Components/Order/Order'
-import About from './Components/About/About'
+import SeaFood from './Components/SeaFood/SeaFood'
 import Contacts from './Components/Contacts/Contacts'
 import Error from './Components/Error/Error'
 import Home from './Components/Home/Home'
@@ -31,8 +31,8 @@ const restaurant = createBrowserRouter([
         element: <Order></Order>
       },
       {
-        path: "/about",
-        element: <About></About>
+        path: "/seafood",
+        element: <SeaFood></SeaFood>
 
       },
       {
