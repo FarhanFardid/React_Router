@@ -14,13 +14,13 @@ const Navbar = () => {
       ];
       
     return (
-        <nav>
-            <div onClick={()=> setOpen(!open)}>
-                <span>{open == true ? <Bars3Icon className="h-6 w-6 text-black-800" /> :  <XMarkIcon className="h-6 w-6 text-black-800" />  } </span>
+        <nav className='bg-purple-800 text-white'>
+            <div onClick={()=> setOpen(!open)} className='md:hidden p-2'>
+                <span>{open == false ? <Bars3Icon className="h-6 w-6 text-black-800" /> :  <XMarkIcon className="h-6 w-6 text-black-800" />  } </span>
              
             </div>
           
-            <ul className ={`md:flex absolute font-bold ${open ? 'top-6' : '-top-48'}`}>
+            <ul className ={`md:flex absolute font-bold md:static p-3 bg-purple-800 duration-500 ${open ? 'top-7' : '-top-60'}`}>
                 {
                     routes.map(route => <Link route={route}></Link> )
                 }

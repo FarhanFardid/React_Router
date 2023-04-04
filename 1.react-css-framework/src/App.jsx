@@ -5,6 +5,9 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './components/Navbar/Navbar';
+import PriceList from './components/PriceList/PriceList';
+import ReChart from './components/Chart/ReChart';
+import Phones from './components/Phones/Phones';
 
 
 function App() {
@@ -13,7 +16,10 @@ function App() {
   return (
     <div className="App">
      <Navbar></Navbar>
-      <h1 className='text-5xl text-purple-700'>Tailwind CSS</h1>
+      <h1 className='text-5xl text-purple-700 text-center p-2 font-bold'>Tailwind CSS with React</h1>
+      <PriceList></PriceList>
+      <ReChart></ReChart>
+      <Phones></Phones>
 
      
       
