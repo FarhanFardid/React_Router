@@ -4,12 +4,14 @@ import App from './App'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Components/Root/Root'
-import Foods from './Components/Foods/Foods'
+
 import Order from './Components/Order/Order'
 import SeaFood from './Components/SeaFood/SeaFood'
 import Contacts from './Components/Contacts/Contacts'
 import Error from './Components/Error/Error'
 import Home from './Components/Home/Home'
+import Canada from './Components/Canadian/Canada'
+import FoodDetails from './Components/FoodDetails/FoodDetails'
 
 const restaurant = createBrowserRouter([
   {
@@ -21,18 +23,25 @@ const restaurant = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: '/food',
-        element: <Foods></Foods>,
+        path: '/canadianfood',
+        element: <Canada></Canada>,
         loader: ()=> fetch('https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian')
         
       },
+    
+    {
+      path: '/foods/:id',
+      element: <FoodDetails></FoodDetails>,
+    loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
+    },
       {
         path:'/order',
         element: <Order></Order>
       },
       {
         path: "/seafood",
-        element: <SeaFood></SeaFood>
+        element: <SeaFood></SeaFood>,
+        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
 
       },
       {
