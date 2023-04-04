@@ -1,12 +1,13 @@
 import React from 'react';
-
+import './User.css';
+import { Link } from 'react-router-dom';
 const User = ({user}) => {
     return (
-        <div>
+        <div className='user'>
             <h2>Name: {user.name}</h2>
-            <p>UserName: {user.username}</p>
-            <p>Email:{user.email}</p>
-            <p>Address:{user.address.city}</p>
+         
+          
+            <p><Link to={`/user/${user.id}`}> Show Details</Link></p>
         </div>
     );
 };
