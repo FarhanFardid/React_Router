@@ -5,20 +5,20 @@
      padding-left: 100px;
      padding-right: 60px;
      align-items: center;
-    
+     margin: 0;
+
 }
 .nav-logo{
     padding: 15px;
-   
-  
 }
 
 .nav-link a{
     color:white;
-    font-size: larger;
+    font-size:x-large;
     padding: 15px;
     font-weight: 700;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    text-decoration: none;
     
 }
 

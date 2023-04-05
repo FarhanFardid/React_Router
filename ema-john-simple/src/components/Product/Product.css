@@ -39,6 +39,9 @@
     position:absolute;
     bottom: 0px;
     left:0%;
+    padding: 15px;
+    font-size:medium;
+    border-radius: 8px;
 
 }
 .btn-cart:hover{
