@@ -3,6 +3,9 @@ import { addToDb, deleteShoppingCart, getShoppingCart} from '../../utilities/fak
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Shop = () => {
     const [products,setProducts] = useState([]);
@@ -79,7 +82,11 @@ let newCart = [];
             </div>
             <div className='product-summary'>
            <Cart cart={cart}
-           deleteCart={deleteCart}></Cart>
+           deleteCart={deleteCart}>
+
+                <Link to="/orders"> <button className='preview-btn'> <span>Review Order</span> <FontAwesomeIcon icon={faArrowRight} /></button></Link>
+           </Cart>
+       
             </div>
         </div>
     );
