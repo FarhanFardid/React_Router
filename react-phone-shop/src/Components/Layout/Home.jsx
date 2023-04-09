@@ -3,9 +3,12 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <h2 className="text-6xl font-semibold text-center p-5 bg-zinc-400">
+      <h2 className="text-6xl font-semibold text-center p-5 bg-zinc-600 text-slate-400">
         Welcome to Apple Store
       </h2>
+      <div className="w-full"> 
+        <img className="w-full" src="https://images.unsplash.com/photo-1615725802642-936d9aade2ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGUlMjBzdG9yZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="image"  />
+      </div>
       <div className="bg-slate-500 p-10 text-xl font-medium">
       <article className='p-5 m-1'>
         Welcome to the world of Apple, where innovative technology meets sleek

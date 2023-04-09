@@ -8,9 +8,9 @@ const Header = () => {
                 <p className='text-5xl font-extrabold text-white '>Apple Store</p>
             </div>
             <div className='me-7'>
-            <Link className='font-bold text-xl ms-4 p-3 text-red-300' to='/'>Home</Link>
-            <Link className='font-bold text-xl ms-4 p-3 text-red-300' to='/shop'>Shop</Link>
-            <Link className='font-bold text-xl ms-4 p-3 text-red-300' to='/order'>Order</Link>
+            <Link className='font-bold text-xl ms-4 p-3 text-slate-300 hover:text-white' to='/'>Home</Link>
+            <Link className='font-bold text-xl ms-4 p-3 text-slate-300 hover:text-white' to='/shop'>Shop</Link>
+            <Link className='font-bold text-xl ms-4 p-3 text-slate-300 hover:text-white' to='/order'>Order</Link>
            
        
 

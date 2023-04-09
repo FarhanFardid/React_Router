@@ -8,6 +8,7 @@ import Root from './Components/Root/Root'
 import Shop from './Components/Shop/Shop'
 import Order from './Components/Order/Order'
 import Error from './Components/Error/Error'
+import ProductDetails from './Components/Products/ProductDetails'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,13 @@ const router = createBrowserRouter([
       {
         path:'order',
         element:<Order></Order>
+      },
+      {
+        path:'details/:id',
+        element: <ProductDetails></ProductDetails>,
+      
+        loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/phone/${params.id}`)
+      
       },
 
       {
