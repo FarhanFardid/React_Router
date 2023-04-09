@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({phone}) => 
+const Product = ({phone,addToCart}) => 
 {
     const {brand,image,phone_name,slug} = phone;
+   
     return (
         <div className="col-span-4 gap-2 border-2 border-gray-600 rounded-lg p-4 text-center relative">
            <div className='mb-8'>
@@ -14,7 +15,7 @@ const Product = ({phone}) =>
        
            </div>
           <div className='absolute bottom-0 mt-4 '>
-          <button className='border-2 rounded-md bg-slate-600 font-bold text-white hover:bg-slate-900 p-2 m-1'>Buy Now </button>
+          <button onClick={()=> addToCart(slug)} className='border-2 rounded-md bg-slate-600 font-bold text-white hover:bg-slate-900 p-2 m-1'>Buy Now </button>
          <Link to ={`/details/${slug}`}> <button className='border-2 rounded-md bg-slate-950 font-bold text-white hover:bg-gray-500 p-2 m-1'>View Details</button></Link>
           </div>
         </div>

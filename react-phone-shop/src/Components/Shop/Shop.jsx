@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {  useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Product from '../Products/Product';
+import Cart from '../Cart/Cart';
+
+
 
 const Shop = () => {
     const loadedData = useLoaderData();
+    const [carts, setCarts] = useState([]);
+    const addToCart = (id) => {
+        // const exist = cart.find(pd=> pd.id === id);
+        // if(!exist){
+            let newCart = [...carts,id];
+            setCarts(newCart);
+        // }
+      
+    }
+ 
     // console.log(loadedData);
 const phones= loadedData.data;
     return (
@@ -18,12 +31,17 @@ const phones= loadedData.data;
   <div  className='grid grid-cols-12 gap-2 p-3'> {
     phones.map(phone => <Product
                 key={phone.slug}
-                phone={phone}></Product>)
+                phone={phone}
+                addToCart={addToCart}></Product>)
    }
    </div>
     </div>
   <div className="col-span-4 bg-gray-600 ">
-  <h2 className='text-xl font-bold text-center p-5'> Cart Summary </h2>
+    {
+        <Cart carts={carts}
+        ></Cart>
+    }
+  
     </div>
 </div>
         </div>
